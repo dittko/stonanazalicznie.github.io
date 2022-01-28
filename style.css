@@ -1,0 +1,294 @@
+html
+{
+  scroll-behavior: smooth;
+}
+
+.navbar
+{
+background-color: rgb(0, 0, 0);
+padding: 1rem 8rem;
+z-index: 1000;
+}
+
+.nevbar .navbar-brand
+{
+ font-size: 7rem;
+ font-weight: 200; 
+
+}
+
+#navbarSupportedContent > ul > li:nth-child(n) > a
+{
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  padding: 0 1rem ;
+}
+#navbarSupportedContent > ul > li:nth-child(n) > a:hover,
+#navbarSupportedContent > ul > li:nth-child(n) > a:active
+{
+  color: rgb(21, 197, 32);
+}
+#navbarSupportedContent > button
+{
+  background-color: rgb(21, 197, 32);
+  font-weight: 600;
+  padding: 0.4rem 1.4rem;
+  border-radius: 30px ;
+}
+
+.mid
+{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
+}
+
+.mid video
+{
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) ;
+}
+
+.hero
+{
+position: relative;
+}
+.mid .hero p
+{
+width: 55%;
+font-size: 1.1rem;
+letter-spacing: 0.2px;
+padding-bottom: 2rem;
+}
+.mid .hero a
+{
+  background-color: rgb(21, 197, 32);
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px ;
+  text-decoration: none;
+}
+.mid .hero a :hover
+{
+  background: #fff; ;
+}
+
+
+
+
+.about
+{
+ background-color: rgb(0, 0, 0); 
+
+}
+.about .text
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+}
+.about .text h2
+{
+color: rgb(40, 240, 14);
+font-weight: 8000;
+font-size: 2rem;
+letter-spacing: 1.3px;
+}
+
+.about .text p
+{
+  color: rgb(255, 255, 255);
+  font-weight: 8000;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+
+.about .text button
+{
+  background-color: rgb(21, 197, 32);
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border-radius: 30px ;
+  text-decoration: none;
+}
+
+.about .text div
+{
+  color: rgb(0, 153, 0);
+  font-weight: 8000;
+  font-size: 1rem;
+  letter-spacing: 1px;
+
+}
+
+.discovery
+{
+ background-color: rgb(0, 0, 0); 
+
+}
+
+.discovery .text p
+{
+color: rgb(40, 240, 14);
+font-weight: 8000;
+font-size: 1rem;
+letter-spacing: 1px;
+}
+.discovery .text h6
+{
+color: rgb(40, 240, 14);
+font-weight: 8000;
+font-size: 2rem;
+letter-spacing: 1px;
+}
+.discovery .text h2
+{
+color: rgb(255, 255, 255);
+font-weight: 8000;
+font-size: 2rem;
+letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gallery
+{background-color: black;}
+
+body {
+  background: rgb(0, 0, 0);
+  margin-top: 100px;
+}
+h3 {
+  color: rgb(0, 0, 0);
+  font-family: Verdana;
+}
+.thumbnails img {
+  height: 100px;
+  border: 4px solid black;
+  padding: 1px;
+  margin: 0 10px 10px 0;
+}
+.thumbnails img:hover {
+  border: 4px solid rgb(0, 153, 0);
+  cursor:pointer;
+}
+.preview img {
+  border: 4px solid black;
+  padding: 1px;
+  width: 800px;
+}
+
+
+
+
+
+
+
+
+
+
+.zegar *{
+  margin: 0;
+  padding: 0;
+}
+
+.zegar{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+
+.datetime{
+  color: #fff;
+  background: #0c0c0e;
+  font-family: "Segoe UI", sans-serif;
+  width: 340px;
+  padding: 15px 10px;
+  border: 3px solid rgb(40, 240, 14);;
+  border-radius: 5px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+}
+
+.datetime:hover{
+  background: rgb(40, 240, 14);;
+  box-shadow: 0 0 30px rgb(40, 240, 14);;
+}
+
+.date{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time{
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time span:not(:last-child){
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time span:last-child{
+  background: rgb(40, 240, 14);;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body > footer 
+{
+  background-color: rgb(7, 7, 7);
+}

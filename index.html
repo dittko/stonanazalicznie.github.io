@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="sz.js"></script>
+    
+    
+
+
+
+
+</head>
+<body data-spy="scroll" data-target="#navbarSupportedContent">
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">TFT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#O nas">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#Odkryj">Discover</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#galeria">Galery </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#zegar">Clock</a>
+              </li>
+              
+          </ul>
+          
+          
+        </div>
+      </nav>
+
+  <div class="mid">
+   <video autoplay muted loop>
+       <source class="embed-responsive" src="vid.mp4" type="video/mp4">
+   </video>
+   <div class="hero text-center">
+       <h2 class="text-light display-4 font-weight-bolder">Lorem </h2>
+       <p class="text-light mx-auto">loream</p>
+       <a class="text-light" href="#O nas">Dalej</a>
+   </div>
+
+ </div>
+
+
+   </header>
+
+   <section id="O nas" class="about py-5">
+     <div class="row align-items-center container my-5 mx-auto">
+       <div class="text col-lg-6 col-md-6 col-12 w-50 pb-5"> 
+         
+       
+          <h2>O Nas</h2>
+          <p>Kliknij aby dowiedziec sie wiecej </p>
+          <button type="button" class="text-light btn btn-primary" data-toggle="collapse" data-target="#demo">kliknij</button>
+          <div id="demo" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        
+
+
+       </div>
+       <div class="img col-lg-6 col-md-6 col-12 w-50 pb-5"> 
+         <img class="img-fluid" src="tło.jpg" style="width:100%;" >
+
+      </div>
+     </div>
+
+     
+
+
+   </section>
+    
+   <section id="Odkryj" class="discovery py-5">
+     <div class="row align-items-center container my-5 mx-auto">
+     <div class="img col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5">
+       <img class="img-fluid" src="tło1.jpg"  >
+      </div>
+      <div class="text col-lg-6 col-md-6 col-12 w-50 pt-5 pb-5">
+        <h6>Odkryj</h6>
+        <h2>Lorem ipsum dolor sit amet consectetur</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempora nobis harum enim, vel id iste sint quidem quaerat repellendus autem libero, aspernatur odit voluptates dolor vitae debitis vero assumenda!</p>
+
+      </div>
+
+     </div>
+
+
+   </section >
+
+ <section id="galeria" class="galeria ">
+    <div class="gallery" align="center">
+     <div class="thumbnails">
+       <img onmouseover="preview.src=img1.src" id="img1" src="gal3.jpg" alt="" />
+       <img onmouseover="preview.src=img2.src" id="img2" src="gal2.jpg" alt="" />
+       <img onmouseover="preview.src=img3.src" id="img3" src="gal1.jpg" alt="" />
+      
+     </div>
+     <br>
+     <div class="preview" align="center">
+       <img id="preview" src="gal3.jpg" alt="" />
+     </div>
+     </br>
+     
+   </div>
+  
+ </div>
+   
+</section>
+  
+<section id="zegar" class="zegar py-5" onload="intClock()">
+  <body onload="initClock()">
+
+    <!--digital clock start-->
+    <div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div>
+    <!--digital clock end-->
+
+    <script type="text/javascript">
+    function updateClock(){
+      var now = new Date();
+      var dname = now.getDay(),
+          mo = now.getMonth(),
+          dnum = now.getDate(),
+          yr = now.getFullYear(),
+          hou = now.getHours(),
+          min = now.getMinutes(),
+          sec = now.getSeconds(),
+          pe = "AM";
+
+          if(hou >= 12){
+            pe = "PM";
+          }
+          if(hou == 0){
+            hou = 12;
+          }
+          if(hou > 12){
+            hou = hou - 12;
+          }
+
+          Number.prototype.pad = function(digits){
+            for(var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+          }
+
+          var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+          var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+          for(var i = 0; i < ids.length; i++)
+          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+    }
+
+    function initClock(){
+      updateClock();
+      window.setInterval("updateClock()", 1);
+    }
+    </script>
+
+  </body>
+
+	
+
+
+
+
+
+</section>
+  
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small indigo text-light">
+
+  <!-- Footer Links -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">About us</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Products</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Awards</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Help</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Contact</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+      <!-- Grid column -->
+      <div class="col-md-8 col-12 mt-5">
+        <p style="line-height: 1.7rem">Wiktor Majchrzak 132287
+        Informatyka sem5</p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+    <!-- Grid row-->
+    <div class="row pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-12">
+
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text"> </i>
+          </a>
+
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
